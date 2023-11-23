@@ -1,0 +1,12 @@
+<div class="flex flex-col gap-1 mt-1 p-1" id="ai-message" >
+    <div class="p-1">
+        <div class="float-left p-4 bg-slate-100 rounded shadow overflow-auto">
+            {% if type == "plot"%}
+                <img src={{img}}>
+            {% else %}
+                {{img}}
+            {%- endif %}
+        </div>
+    </div>
+</div>
+

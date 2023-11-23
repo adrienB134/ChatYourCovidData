@@ -1,0 +1,8 @@
+pandasai
+typing 
+fastapi
+requests 
+python-multipart 
+pandas 
+plotly 
+plotly_express

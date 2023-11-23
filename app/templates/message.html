@@ -1,0 +1,23 @@
+
+
+<div class="flex flex-col gap-1 mt-1 mb-1 p-1" id="human-message" >
+    <div class="p-1">
+        <div class="float-right p-4 bg-slate-100 rounded shadow">
+            <p>{{txt}}</p>
+        </div>
+    </div>
+</div>
+
+<input  id="input-field"
+        name="chat_message"
+        type="text"
+        placeholder="Type your message here"
+        class="flex-1 w-full"
+        hx-swap="beforeend scroll:bottom"
+        hx-post="/message"
+        hx-on="[return]"
+        hx-target="#chat"
+        hx-swap-oob="true"
+      
+        
+>
