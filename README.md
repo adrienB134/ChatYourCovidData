@@ -22,7 +22,7 @@ gh repo clone adrienB134/ChatYourCovidData
 cd ChatYourCovidData/app/routes
 wget https://opendata.ecdc.europa.eu/covid19/nationalcasedeath_eueea_daily_ei/csv/data.csv
 cd ../..
-echo $OPENAI_KEY='YOUR_OPENAI_KEY' > .env
+echo OPENAI_KEY='YOUR_OPENAI_KEY' > .env
 source launch.sh
 ```
 
