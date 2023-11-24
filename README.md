@@ -19,9 +19,7 @@ If you want to try it on your computer, open a terminal and do the following:<br
 
 ```bash
 gh repo clone adrienB134/ChatYourCovidData
-cd ChatYourCovidData/app
-wget https://opendata.ecdc.europa.eu/covid19/nationalcasedeath_eueea_daily_ei/csv/data.csv
-cd ..
+cd ChatYourCovidData
 echo OPENAI_KEY='YOUR_OPENAI_KEY' > .env
 source launch.sh
 ```

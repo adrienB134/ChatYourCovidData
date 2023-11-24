@@ -15,25 +15,36 @@ templates = Jinja2Templates(directory="./templates")
 
 @router.get("/")
 async def index():
+    """
+    Index page
+    """
     return FileResponse("./templates/index.html")
 
 
 @router.post("/message")
 async def human_message(request: Request, chat_message: str = Form(...)):
-    # Pause to avoid replacing the input form before /answer has been called
+    """
+    Returns the human message template with the content of the input form.
+    It also swaps the input form to clear it.
+    """
+
     time.sleep(0.1)
+    # Pause to avoid replacing the input form before /answer has been called
     return templates.TemplateResponse(
         "message.html", {"request": request, "txt": chat_message}
     )
 
 
 @router.post("/answer")
-def analytics(request: Request, chat_message: str = Form(...)):
-    answer_type, answer_value = get_answer(df, chat_message=chat_message)
+def ai_message(request: Request, chat_message: str = Form(...)):
+    """
+    Returns the ai_message template with the answer from pandasAI.
+    """
+    answer_type, answer_value, _ = get_answer(df, chat_message=chat_message)
     # Pause to avoid message/answer inversion when loading the answer from cache
     time.sleep(0.1)
-    print(answer_value)
+
     return templates.TemplateResponse(
-        "chart.html",
-        {"request": request, "type": answer_type, "img": answer_value},
+        "ai_message.html",
+        {"request": request, "type": answer_type, "value": answer_value},
     )
