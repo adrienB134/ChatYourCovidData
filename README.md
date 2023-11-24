@@ -1,6 +1,9 @@
 # ChatYourCovidData
 A simple webchat using pandasAI to talk to data. FastAPI as backend, HTMX for frontend.
 
+![image](https://github.com/adrienB134/ChatYourCovidData/assets/102990337/060fcaeb-5922-4ab4-aa50-e7d8caaca02c)
+
+
 ## Try it out
 
 You can try this app [here](https://chat-covid-data-86c873eec29c.herokuapp.com/).
