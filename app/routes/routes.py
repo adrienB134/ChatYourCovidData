@@ -20,6 +20,8 @@ async def index():
 
 @router.post("/message")
 async def human_message(request: Request, chat_message: str = Form(...)):
+    # Pause to avoid replacing the input form before /answer has been called
+    time.sleep(0.1)
     return templates.TemplateResponse(
         "message.html", {"request": request, "txt": chat_message}
     )
