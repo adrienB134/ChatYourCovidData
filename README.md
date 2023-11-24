@@ -10,7 +10,8 @@ You can try this app at [GitHub Pages]((https://chat-covid-data-86c873eec29c.her
 If you want to try it on your computer, open a terminal and do the following:
 
 ```bash
-git clone adrienB134/ChatYourCovidData.git
+gh repo clone adrienB134/ChatYourCovidData
+cd ChatYourCovidData
 source launch.sh
 ```
 
