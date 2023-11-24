@@ -13,12 +13,12 @@ import os
 
 def init():
     """
-    Creates a class ResponseTuned to inhibit the default parsing behavior
+    Declares a ResponseTuned class to inhibit the default parsing behavior
     (It tries to open a matplotlib GUI by default)
 
     Clears the cache database.
 
-    And creates a pandasAI SmartDataframe.
+    Then initializes a pandasAI SmartDataframe.
 
     """
 
@@ -37,7 +37,7 @@ def init():
     clear_cache()
 
     API_KEY = os.environ.get("OPENAI_KEY")
-    user_defined_path = os.getcwd() + "/static/png"
+
     llm = OpenAI(api_token=API_KEY)
     config__ = {
         "llm": llm,
