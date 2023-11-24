@@ -9,6 +9,7 @@ A simple webchat using pandasAI to talk to data. FastAPI as backend, HTMX for fr
 You can try this app [here](https://chat-covid-data-86c873eec29c.herokuapp.com/).
 
 ## Try it locally
+⚠️You need to have docker installed.
 
 If you want to try it on your computer, open a terminal and do the following:
 
@@ -20,5 +21,5 @@ cd ../..
 source launch.sh
 ```
 
-You need to have docker installed for it to work.
+Then open https://0.0.0.0:4000 in your favorite browser.
 
