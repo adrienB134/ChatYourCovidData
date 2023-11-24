@@ -12,6 +12,16 @@ import os
 
 
 def init():
+    """
+    Creates a class ResponseTuned to inhibit the default parsing behavior
+    (It tries to open a matplotlib GUI by default)
+
+    Clears the cache database.
+
+    And creates a pandasAI SmartDataframe.
+
+    """
+
     class ResponseTuned(ResponseParser):
         _context = None
 
@@ -46,6 +56,10 @@ def init():
 
 
 def get_answer(df, chat_message):
+    """
+    For a question returns the answer type and value
+    and tokens & price information.
+    """
     with get_openai_callback() as cb:
         df.chat(chat_message)
         response = df.last_result
@@ -55,4 +69,4 @@ def get_answer(df, chat_message):
         except:
             answer_type = "string"
             answer_value = "I'm sorry I couldn't get an answer please rephrase."
-    return answer_type, answer_value
+    return answer_type, answer_value, cb
