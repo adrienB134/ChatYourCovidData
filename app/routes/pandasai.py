@@ -18,7 +18,7 @@ def init():
 
     Clears the cache database.
 
-    Then initializes a pandasAI SmartDataframe.
+    Then initializes a pandasAI SmartDataframe with the data.
 
     """
 
