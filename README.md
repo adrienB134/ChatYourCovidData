@@ -26,5 +26,5 @@ echo OPENAI_KEY='YOUR_OPENAI_KEY' > .env
 source launch.sh
 ```
 
-Then open https://0.0.0.0:4000 in your favorite browser. 
+Then open http://0.0.0.0:4000 in your favorite browser. 
 
